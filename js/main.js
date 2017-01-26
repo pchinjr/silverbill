@@ -58,7 +58,7 @@ var calculate = function(obj) {
 
     userScore = userScore / 5; //averages users score out of 5 questions
 
-    document.getElementById('#modal').innerHTML = `Congratulations ${obj.firstName} Your Score is ${userScore} and your average sale is ${salesInt / transactionsInt}`;
+    document.getElementById('#modal').innerHTML = `<p>Congratulations ${obj.firstName} Your Score is ${userScore} and your average sale is ${salesInt / transactionsInt}</p>`;
 
     $('#myModal').modal();
 }

@@ -98,12 +98,12 @@
           <div class="form-group">
             <label for="salesVolume">Monthly Card Sales Volume</label>
             <p class="help-block">Look for 'total net sales' or 'total deposit' or something similar. If you are not accepting credit cards just put 0.</p>
-            <input type="number" class="form-control" id="salesVolume">
+            <input type="number" class="form-control" id="salesVolume" required>
           </div>
           <div class="form-group">
             <label for="numberTransactions">Number of Transactions</label>
             <p class="help-block">You should have a column total on your processor statement. If you are not accepting credit cards just put 0.</p>
-            <input type="number" class="form-control" id="numberTransactions">
+            <input type="number" class="form-control" id="numberTransactions" required>
           </div>
           <p>I allow Silverbill to share my business type, Avg. monthly sales volume, and Avg. ticket size with Silverbill's partners. I allow Silverbill to contact me regarding this request. I am authorized to enter this information on behalf of the company listed above.</p>
           <div class="checkbox">
@@ -124,14 +124,13 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            <h4 class="modal-title" id="myModalLabel">Rate Results</h4>
           </div>
           <div class="modal-body" id="#modal">
             ...
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
