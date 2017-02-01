@@ -2,7 +2,7 @@
 const obj ={};
 
 $("#quoteForm").submit( function(event){
-    alert("submit event");
+    alert("submit event" + document.forms[0]);
     const form = document.forms[0];
     for(const data of form) {
         obj[data.id] = data.value;
