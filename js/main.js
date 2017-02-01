@@ -1,18 +1,26 @@
 
 const obj ={};
 
-$("#quoteForm").submit( function(event){
-    
-    var form = document.forms[0];
-    alert("submit event" + JSON.stringify(obj));
-    for(const data of form) {
-        obj[data.id] = data.value;
-    };
-    
+$("#quoteForm").submit( function(event){ 
+    $("#quoteForm").find('input,select').each(function(index, element) {
+    obj[element.id] = element.value;
+    });
     event.preventDefault();
     displayResults();
-    
 });
+
+// $("#quoteForm").submit( function(event){
+    
+//     var form = document.forms[0];
+//     alert("submit event" + JSON.stringify(obj));
+//     for(const data of form) {
+//         obj[data.id] = data.value;
+//     };
+    
+//     event.preventDefault();
+//     displayResults();
+    
+// });
 
 const displayResults = function() {
     let userScore = calcScore();
