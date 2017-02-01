@@ -100,7 +100,7 @@ const calcRate = function() {
     } else if (salesInt > 50000) {
         cent = 0.08;
     }
-
+  
     let adjustedBp = (salesInt * bp + salesInt * scoreMultiplier);
     let salesCents = transInt * cent;
 
