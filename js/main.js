@@ -7,8 +7,7 @@ $("#quoteForm").submit(function(event){
         obj[data.id] = data.value;
     };
     event.preventDefault();
-    displayResults()
-    
+    displayResults();
 });
 
 const displayResults = function() {
@@ -18,6 +17,7 @@ const displayResults = function() {
     const salesInt = parseInt(obj.salesVolume);
     const transactionsInt = parseInt(obj.numberTransactions);
 
+    alert('here');
     document.getElementById('#modal').innerHTML = `<p>Congratulations ${obj.firstName} You qualify for a nominal rate of ${userRate.nominal}% and you can expect to pay $${userRate.realDollar} a month for processing.</p>`;
 
     $('#myModal').modal();
