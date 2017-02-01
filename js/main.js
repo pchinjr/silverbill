@@ -3,7 +3,7 @@ const obj ={};
 
 $("#quoteForm").submit( function(event){
     
-    const form = document.forms[0];
+    var form = document.forms[0];
     alert("submit event" + JSON.stringify(obj));
     for(const data of form) {
         obj[data.id] = data.value;
