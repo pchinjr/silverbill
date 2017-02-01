@@ -7,9 +7,10 @@ $("#quoteForm").submit( function(event){
     for(const data of form) {
         obj[data.id] = data.value;
     };
+    alert("submit event" + JSON.stringify(obj));
     event.preventDefault();
     displayResults();
-    alert("submit event");
+    
 });
 
 const displayResults = function() {
