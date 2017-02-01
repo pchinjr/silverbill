@@ -23,7 +23,7 @@ const displayResults = function() {
 
     alert("made it to displayResults")
 
-    document.getElementById('#modal').innerHTML = `<p>Congratulations ${obj.firstName} You qualify for a nominal rate of ${userRate.nominal}% and you can expect to pay $${userRate.realDollar} a month for processing.</p>`;
+    document.getElementById('modal').innerHTML = `<p>Congratulations ${obj.firstName} You qualify for a nominal rate of ${userRate.nominal}% and you can expect to pay $${userRate.realDollar} a month for processing.</p>`;
 
     $('#myModal').modal();
 }
