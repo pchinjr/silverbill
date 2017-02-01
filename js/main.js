@@ -1,26 +1,16 @@
 
 const obj ={};
 
+//thanks 757dev! 
 $("#quoteForm").submit( function(event){ 
-    $("#quoteForm").find('input,select').each(function(index, element) {
-    obj[element.id] = element.value;
+    $("#quoteForm")
+    .find('input,select')
+    .each( function(index, element) {
+        obj[element.id] = element.value;
     });
     event.preventDefault();
     displayResults();
 });
-
-// $("#quoteForm").submit( function(event){
-    
-//     var form = document.forms[0];
-//     alert("submit event" + JSON.stringify(obj));
-//     for(const data of form) {
-//         obj[data.id] = data.value;
-//     };
-    
-//     event.preventDefault();
-//     displayResults();
-    
-// });
 
 const displayResults = function() {
     let userScore = calcScore();
@@ -29,11 +19,9 @@ const displayResults = function() {
     const salesInt = parseInt(obj.salesVolume);
     const transactionsInt = parseInt(obj.numberTransactions);
 
-    alert("made it to displayResults")
+    var str = `<p>Congratulations ${obj.firstName}, You qualify for a nominal rate of ${userRate.nominal}% and you can expect to pay $${userRate.realDollar} a month for processing.</p>`
 
-    var str = `<p>Congratulations ${obj.firstName} You qualify for a nominal rate of ${userRate.nominal}% and you can expect to pay $${userRate.realDollar} a month for processing.</p>`
-
-    document.getElementById('modal').innerHTML= str;
+    document.getElementById('modal').innerHTML= str; //mixing my vanillajs with my jquery. yolo.
 
     $('#myModal').modal();
 }
@@ -126,8 +114,6 @@ const calcRate = function() {
         realDollar: realDollar,
         nominal: nominalFixed 
     }
-
-    //console.log(score, avgTicket, bp, adjustedBp, salesInt, scoreMultiplier, salesCents, transInt, markup, nominal, realDollar);
 
 }
 
